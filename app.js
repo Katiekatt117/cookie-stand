@@ -2,7 +2,7 @@ const seattle = {
     min : 23,
     max: 65,
     avg: 6.3,
-    location: "Seattle",
+    location: 'Seattle',
     hoursOfOperation: [
         "6am",
         "7am",
@@ -26,6 +26,11 @@ const seattle = {
     },
     cookiesPerHour: [],
     getCookies: function () {
-        for (let i = 0; i < this.hoursOfOperation.length)
+        for (let i = 0; i < this.hoursOfOperation.length; i++) {
+            console.log('seattle avg cookies/sale', this.avg);
+            console.log('seattle avg customers/hour', this.customersPerHour());
+            this.cookiesPerHour.push(this.avg * this.customersPerHour());
+        }
+        return this.cookiesPerHour;
     },
-};
+}
