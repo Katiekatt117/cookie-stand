@@ -1,3 +1,10 @@
+'use strict'
+//random function between max and min input
+function getRandom(max, min) {
+    return Math.ceil(Math.random() * (max - min) + min);
+    // 0 >= random # <= 1 * limit
+}
+
 const seattle = {
     min : 23,
     max: 65,
@@ -32,5 +39,15 @@ const seattle = {
             this.cookiesPerHour.push(this.avg * this.customersPerHour());
         }
         return this.cookiesPerHour;
-    },
+    }
 }
+
+getRandom()
+customersPerHour()
+getCookies()
+
+//object definition for a location
+    //---starting data
+        /*
+        Location    Min/Cust    Max/Cust    AvgCookie/Sale
+        Seattle     23          65          6.3
