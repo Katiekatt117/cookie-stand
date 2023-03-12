@@ -5,13 +5,21 @@
     color: red
 } */
 
+h1{
+  background-color: rgb(253, 76, 56);
+}
+
+p{
+  background-color: rgb(253, 76, 56);
+}
 
 body{
     background-color: salmon;
     font-family: sans-serif;
-    color: greenyellow;
+    color: rgb(86, 121, 16);
+    ;
     background-image: url(salmon.png);
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .navbar a {
