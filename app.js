@@ -196,19 +196,4 @@ form.addEventListener('submit', (e) => {
     }else{
         alert("Store Location Saved")
     }
-    let locationNew = 
 })
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
