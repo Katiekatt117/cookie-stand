@@ -6,8 +6,7 @@ function getRandom(max, min) {
 }
 
 // seattle sales
-const seattle = {
-    min: 23,
+git    min: 23,
     max: 65,
     avg: 6.3,
     location: `Seattle`,
