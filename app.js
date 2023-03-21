@@ -196,7 +196,7 @@ form.addEventListener('submit', (e) => {
     }else{
         alert("Store Location Saved")
     }
-})
+});
 
 function newLocation() {
     const newLocation = {
@@ -218,7 +218,7 @@ function newLocation() {
     }
     newLocation.getCookies();
     let totalLocal = 0;
-    let hoursArrayNewLocal = document.querySelector('.outputNew')
+    let hoursArrayNewLocal = document.querySelector('.addNewLocation')
     for (let i = 0; i < seattle.hoursOfOperation.length; i++) {
         let variable = document.createElement("td");
         totalLocal = newLocation.cookiesPerHour[i] + totalLocal;
