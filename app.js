@@ -196,19 +196,38 @@ form.addEventListener('submit', (e) => {
     }else{
         alert("Store Location Saved")
     }
-    let locationNew = 
-})
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+});
+
+function newLocation() {
+    const newLocation = {
+        min: 2,
+        max: 65,
+        avg: 6.3,
+        location: ``,
+        hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+        customersPerHour: function () {
+            return getRandom(this.max, this.min);
+        },
+        cookiesPerHour: [],
+        getCookies: function () {
+            for (let i = 0; i < this.hoursOfOperation.length; i++) {
+                this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
+            }
+            return this.cookiesPerHour;
+        }
+    }
+    newLocation.getCookies();
+    let totalLocal = 0;
+    let hoursArrayNewLocal = document.querySelector('.addNewLocation')
+    for (let i = 0; i < seattle.hoursOfOperation.length; i++) {
+        let variable = document.createElement("td");
+        totalLocal = newLocation.cookiesPerHour[i] + totalLocal;
+        variable.innerHTML = `${newLocation.cookiesPerHour[i]} cookies`;
+        hoursArrayNewLocal.append(variable);
+    }
+
+    let cookieTotalLocal = document.createElement("td");
+    cookieTotalLocal.innerHTML = `${totalLocal} cookies`;
+    hoursArrayNewLocal.append(cookieTotalLocal);
+}
+

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Solitreo&family=Literata">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Solitreo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif">
@@ -14,46 +14,78 @@
 </head>
 
 <body>
-
-<div>
-    <div class="bg-outline">
-    <h1 class="outline">Sales information</h1>
+    <div class="title">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
     </div>
-</div>
-        <table>
-            <tr id="time">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="news">News</a>
+        <a href="sales.html">Sales</a>
+        <div class="dropdown">
+            <button class="dropbtn">Locations
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Seattle</a>
+                <a href="#">Tokyo</a>
+                <a href="#">Dubai</a>
+                <a href="#">Paris</a>
+                <a href="#">Lima</a>
+            </div>
+        </div>
+    </div>
 
-            </tr>
-            <tr class="output1">
-                <td>Seattle</td>
-            </tr>
+    <div>
+        <div class="bg-outline">
+            <h1 class="outline">Sales information</h1>
+        </div>
+    </div>
+    <table>
+        <tr id="time">
 
-            <tr class="output2"> 
-                <td>Toyko</td>
-            </tr>
+        </tr>
+        <tr class="output1">
+            <td>Seattle</td>
+        </tr>
 
-            <tr class="output3">
-                <td>Dubai</td>
-            </tr>
+        <tr class="output2">
+            <td>Toyko</td>
+        </tr>
 
-            <tr class="output4">
-                <td>Paris</td>
-            </tr>
+        <tr class="output3">
+            <td>Dubai</td>
+        </tr>
 
-            <tr class="output5">
-                <td>Lima</td>
-            </tr>
-        </table>
+        <tr class="output4">
+            <td>Paris</td>
+        </tr>
 
-<div>
-    <form id="locationForm">
-        <label for="//">Enter a New Location</label>
-        <input type="text" id="location"> 
-        <input type="submit">
-    </form>
-</div>
+        <tr class="output5">
+            <td>Lima</td>
+        </tr>
 
-            <script src="app.js"></script>
+        <tr class="addNewLocation">
+            <td class="newPop"></td>
+        </tr>
+    </table>
+
+    <div>
+        <form id="addNewLocation">
+            <label for="location">Enter a New Location</label>
+            <input type="text" id="location">
+            <input type="button" onclick="newLocation()" value="Submit">
+        </form>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
